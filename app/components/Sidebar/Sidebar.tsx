@@ -1,8 +1,11 @@
+import styles from "./Sidebar.module.css";
 
 export default function SidebarComponent() {
   return (
     <>
-      <div>Sidebar, desde Layout</div>
+      <div className={styles.example}>
+        Sidebar
+      </div>
     </>
   )
 }

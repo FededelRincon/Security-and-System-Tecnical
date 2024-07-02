@@ -1,6 +1,9 @@
+import styles from "./Interests.module.css";
 
 export default function InterestsComponent() {
   return (
-    <div>Interests</div>
+    <div className={styles.example}>
+      Interests
+    </div>
   )
 }

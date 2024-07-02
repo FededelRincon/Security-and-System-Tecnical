@@ -2,7 +2,6 @@ import NavbarComponent from "../components/Navbar/Navbar";
 import SidebarComponent from "../components/Sidebar/Sidebar";
 import styles from "../profile/page.module.css";
 
-
 export default function RootLayout({
   children,
 }: Readonly<{

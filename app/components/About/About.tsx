@@ -1,6 +1,9 @@
+import styles from "./About.module.css";
 
 export default function AboutComponent() {
   return (
-    <div>About</div>
+    <div className={styles.example}>
+      About
+    </div>
   )
 }
