@@ -1,6 +1,24 @@
-.example {
-    background-color: var(--color-principal);
-  }
+.InterestContainer{
+  margin: 0 1rem;
+}
+
+.InterestText{
+  
+}
+
+.badgeContainer{
+  background-color: var(--color-principal);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.badge{
+  background-color: tomato;
+  margin: 5px;
+  border-radius: 30px;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+}
 
 /* Media queries para tablet */
 @media (min-width: 768px) {}

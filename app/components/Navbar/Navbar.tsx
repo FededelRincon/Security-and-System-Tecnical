@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./Navbar.module.css";
-import logo from "../../../public/next.svg"
+import profilePic from "../../../public/messi.jpg"
 
 
 export default function NavbarComponent() {
@@ -8,23 +8,18 @@ export default function NavbarComponent() {
     <>
       <nav className={styles.navbar}>
         <div className={styles.logo}>Logo</div>
-        <ul className={styles.navLinks}>
-          <li>Inicio</li>
-          <li>Noticias</li>
-          <li>Contacto</li>
-        </ul>
-        <div className={styles.profile}>Mi Perfil</div>
+        <h4>Lionel Messi</h4>
+        <div className={styles.picContainer}>
+          <Image
+            src={ profilePic }
+            alt="Profile Picture"
+            className={styles.picture}
+            width={100}
+            height={25}
+            priority  
+          />
+        </div>
       </nav>
-
-      {/* para el logo */}
-    {/* <Image
-        src={logo}
-        alt="Vercel Logo"
-        className={styles.vercelLogo}
-        width={100}
-        height={24}
-        priority  
-      /> */}
     </>
   )
 }

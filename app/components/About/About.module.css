@@ -1,6 +1,16 @@
-.example {
-    background-color: var(--color-principal);
-  }
+.AboutContainer{
+  margin: 0 1rem;
+}
+
+.AboutTitle {
+  background-color: var(--color-principal);
+}
+
+.AboutText {
+  background-color: pink;
+}
+
+
 
 /* Media queries para tablet */
 @media (min-width: 768px) {}

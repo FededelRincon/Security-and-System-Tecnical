@@ -21,19 +21,16 @@
   font-size: 1.5rem;
 }
 
-.navLinks {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+.picContainer{
+  height: 3rem;
+  width: 3rem;
 }
-
-.navLinks li {
+.picture {
+  border-radius: 50px;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
-}
-
-.profile {
-  font-size: 1rem;
-  cursor: pointer;
+  object-fit: fill;
 }
 
   /* Media queries para tablet */
@@ -57,18 +54,4 @@
     font-size: 1.5rem;
   }
   
-  .navLinks {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .navLinks li {
-    cursor: pointer;
-  }
-  
-  .profile {
-    font-size: 1rem;
-    cursor: pointer;
-  }
 }

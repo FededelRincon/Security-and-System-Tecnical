@@ -1,6 +1,37 @@
-.example {
-    background-color: var(--color-principal);
-  }
+.FormContainer {
+  /* background-color: var(--color-principal); */
+  margin: 0 1rem;
+}
+
+.field{
+  background-color: #46466b;
+  color: #949495;
+  border: 2px solid #22aed4;
+  border-radius: 8px;
+
+  width: 100%;
+  padding: 9px 18px;
+  margin: 5px 0;
+}
+
+.button {
+  background-color: #46466b;
+  color: #fcfcfc;
+  border: 2px solid #22aed4;
+  border-radius: 8px;
+
+  width: 100%;
+  padding: 9px 18px;
+  margin: 5px 0;
+  transition: all 0.3s ease-out;
+}
+
+.button:hover {
+  background-color: #083359;
+  color: #949495;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
 
 /* Media queries para tablet */
 @media (min-width: 768px) {}
