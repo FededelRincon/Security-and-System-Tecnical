@@ -1,7 +1,42 @@
+/* modificar esto para que se adapte bien a celulares */
+/* ya esta copiado a desktop */
+
 .sidebar {
   width: 200px;
   background-color: #444;
   color: #fff;
   padding: 20px;
   box-sizing: border-box;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+}
+
+/* Media queries para tablet */
+@media (min-width: 768px) {}
+
+/* Media queries para desktop */
+@media (min-width: 1024px) {
+  .sidebar {
+    width: 200px;
+    background-color: #444;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin: 10px 0;
+  }
 }

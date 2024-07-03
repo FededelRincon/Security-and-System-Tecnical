@@ -1,3 +1,9 @@
 .example {
     background-color: var(--color-principal);
   }
+
+/* Media queries para tablet */
+@media (min-width: 768px) {}
+
+/* Media queries para desktop */
+@media (min-width: 1024px) {}

@@ -1,3 +1,6 @@
+/* modificar esto para que se adapte bien a celulares */
+/* ya esta copiado a desktop */
+
 .header {
   background-color: --color-principal;
 }
@@ -15,9 +18,34 @@
 
 .content {
   flex: 1;
-  /* padding: 20px; */
   background-color: #f4f4f4;
-  /* overflow: auto; */
+}
+
+
+/* Media queries para tablet */
+@media (min-width: 768px) {}
+
+/* Media queries para desktop */
+@media (min-width: 1024px) {
+  .header {
+    background-color: --color-principal;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .main {
+    display: flex;
+    flex: 1;
+  }
+  
+  .content {
+    flex: 1;
+    background-color: #f4f4f4;
+  }
 }
 
 /********* borrar despues ********* */

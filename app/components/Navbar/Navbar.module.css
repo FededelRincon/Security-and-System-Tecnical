@@ -1,7 +1,46 @@
+/* modificar esto para que se adapte bien a celulares */
+/* ya esta copiado a desktop */
+
 .example {
     background-color: var(--color-principal);
-  }
+}
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: rgb(58, 82, 105);
+  width: 100%;
+  color: #ccc;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navLinks li {
+  cursor: pointer;
+}
+
+.profile {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+  /* Media queries para tablet */
+@media (min-width: 768px) {}
+
+/* Media queries para desktop */
+@media (min-width: 1024px) {
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -32,3 +71,4 @@
     font-size: 1rem;
     cursor: pointer;
   }
+}
