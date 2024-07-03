@@ -1,6 +1,13 @@
-.FormContainer {
+.FormPageContainer {
   /* background-color: var(--color-principal); */
   margin: 0 1rem;
+  /* width: 75%; */
+  /* margin: 0 auto; */
+}
+
+.FormContainer {
+  width: 75%;
+  margin: 0 auto;
 }
 
 .field{

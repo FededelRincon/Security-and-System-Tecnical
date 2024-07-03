@@ -1,5 +1,7 @@
 "use client"
 import React, { useState, FormEvent } from 'react';
+import { toast } from 'react-hot-toast';
+
 import styles from "./Form.module.css";
 
 interface FormData {
@@ -40,10 +42,13 @@ export default function FormComponent() {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     if (validateForm()) {
+      toast.error('Mensaje enviado !!'); 
       console.log('Form is valid', formData);
-      // Aquí puedes manejar el envío del formulario
+
     } else {
+      toast.error('Hay errores que corregir !!');
       console.log('Form is invalid');
     }
   };
@@ -54,56 +59,58 @@ export default function FormComponent() {
   };
 
   return (
-    <div className={styles.FormContainer}>
+    <div className={styles.FormPageContainer}>
       <div>Form</div>
       
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="fullName">Nombre:</label>
-          <input
-            className={styles.field}
-            type="text"
-            name="fullName"
-            value={formData.fullName}
-            onChange={handleChange}
-            placeholder="Nombre"
-          />
-          {errors.fullName && <span className={styles.error}>{errors.fullName}</span>}
-        </div>
+      <div className={styles.FormContainer}>
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label htmlFor="fullName">Nombre:</label>
+            <input
+              className={styles.field}
+              type="text"
+              name="fullName"
+              value={formData.fullName}
+              onChange={handleChange}
+              placeholder="Nombre"
+            />
+            {errors.fullName && <span className={styles.error}>{errors.fullName}</span>}
+          </div>
 
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input
-            className={styles.field}
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="Email"
-          />
-          {errors.email && <span className={styles.error}>{errors.email}</span>}
-        </div>
+          <div>
+            <label htmlFor="email">Email:</label>
+            <input
+              className={styles.field}
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Email"
+            />
+            {errors.email && <span className={styles.error}>{errors.email}</span>}
+          </div>
 
-        <div>
-          <label htmlFor="description">Mensaje:</label>
-          <textarea
-            className={styles.field}
-            name="description"
-            value={formData.description}
-            onChange={handleChange}
-            placeholder="Tu mensaje..."
-            cols={20}
-            rows={5}
-          />
-          {errors.description && <span className={styles.error}>{errors.description}</span>}
-        </div>
+          <div>
+            <label htmlFor="description">Mensaje:</label>
+            <textarea
+              className={styles.field}
+              name="description"
+              value={formData.description}
+              onChange={handleChange}
+              placeholder="Tu mensaje..."
+              cols={20}
+              rows={5}
+            />
+            {errors.description && <span className={styles.error}>{errors.description}</span>}
+          </div>
 
-        <div>
-          <button className={styles.button} type="submit">
-            Enviar Mensaje
-          </button>
-        </div>
-      </form>
+          <div>
+            <button className={styles.button} type="submit">
+              Enviar Mensaje
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }
