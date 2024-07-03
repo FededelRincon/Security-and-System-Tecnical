@@ -1,6 +1,4 @@
-.header {
-    background-color: var(--color-principal);
-  }
+
 
 /* Media queries para tablet */
 @media (min-width: 768px) {}

@@ -1,4 +1,4 @@
-import NavbarComponent from "../components/Navbar/Navbar";
+import HeaderComponent from "../components/Header/Header";
 import SidebarComponent from "../components/Sidebar/Sidebar";
 import styles from "../profile/page.module.css";
 
@@ -10,7 +10,7 @@ export default function RootLayout({
   return (
     <>
       <div className={styles.container}>
-        <NavbarComponent />
+        <HeaderComponent />
         <div className={styles.main}>
           <SidebarComponent />
           <div className={styles.content}>
