@@ -33,6 +33,12 @@
   cursor: pointer;
 }
 
+.error {
+  color: red;
+  font-size: 0.8em;
+  margin-top: 0.2em;
+}
+
 /* Media queries para tablet */
 @media (min-width: 768px) {}
 
