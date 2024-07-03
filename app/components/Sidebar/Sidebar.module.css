@@ -1,3 +1,7 @@
-.example {
-    background-color: var(--color-principal);
-  }
+.sidebar {
+  width: 200px;
+  background-color: #444;
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+}
