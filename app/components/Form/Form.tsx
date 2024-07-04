@@ -25,7 +25,7 @@ export default function FormComponent() {
 
   const [errors, setErrors] = useState<FormErrors>({});
 
-  const validateForm = (): boolean => {
+  const validateForm = (): FormErrors => {
     const newErrors: FormErrors = {};
     if (formData.fullName.length < 3) {
       newErrors.fullName = 'El nombre debe tener al menos 3 caracteres';
@@ -36,17 +36,18 @@ export default function FormComponent() {
     if (formData.description.length < 6) {
       newErrors.description = 'El mensaje debe tener al menos 6 caracteres';
     }
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
+    return newErrors;
   };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    if (validateForm()) {
-      toast.error('Mensaje enviado !!'); 
+  
+    const formErrors = validateForm();
+    setErrors(formErrors);
+  
+    if (Object.keys(formErrors).length === 0) {
+      toast.success('Mensaje enviado !!'); 
       console.log('Form is valid', formData);
-
     } else {
       toast.error('Hay errores que corregir !!');
       console.log('Form is invalid');
@@ -63,7 +64,7 @@ export default function FormComponent() {
       <h5 className={styles.FormText}>Form</h5>
 
       <div className={styles.FormContainer}>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} noValidate>
           <div className={styles.separator}>
             <label htmlFor="fullName" className={styles.fieldName} >Nombre:</label>
             <input
