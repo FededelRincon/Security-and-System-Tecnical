@@ -4,7 +4,7 @@ export default function InterestsComponent() {
   return (
     <>
       <div className={styles.InterestContainer}>
-        <h5 className={styles.InterestText}>Interests</h5>
+        <h5 className={styles.InterestText}>Intereses</h5>
         <div className={styles.badgeContainer}>
           <div className={styles.badge}>Fútbol</div>
           <div className={styles.badge}>Barcelona</div>

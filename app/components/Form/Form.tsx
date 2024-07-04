@@ -68,6 +68,7 @@ export default function FormComponent() {
             <label htmlFor="fullName" className={styles.fieldName} >Nombre:</label>
             <input
               className={styles.field}
+              id="fullName"
               type="text"
               name="fullName"
               value={formData.fullName}
@@ -81,6 +82,7 @@ export default function FormComponent() {
             <label htmlFor="email" className={styles.fieldName}>Email:</label>
             <input
               className={styles.field}
+              id="email"
               type="email"
               name="email"
               value={formData.email}
@@ -94,6 +96,7 @@ export default function FormComponent() {
             <label htmlFor="description" className={styles.fieldName}>Mensaje:</label>
             <textarea
               className={styles.field}
+              id="description"
               name="description"
               value={formData.description}
               onChange={handleChange}
