@@ -8,7 +8,7 @@ export default function NavbarComponent() {
     <>
       <nav className={styles.navbar}>
         <div className={styles.logo}>Logo</div>
-        <h4>Lionel Messi</h4>
+        <h4 className={styles.profileName}>Lionel Messi</h4>
         <div className={styles.picContainer}>
           <Image
             src={ profilePic }

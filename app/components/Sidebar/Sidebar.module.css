@@ -6,7 +6,9 @@
   .sidebar {
     display: block;
     width: 150px;
-    background-color: #444;
+    background: linear-gradient(to top, var(--color-first)30% , var(--color-second) 90%);
+
+
     color: #fff;
     padding: 2.5rem;
     box-sizing: border-box;

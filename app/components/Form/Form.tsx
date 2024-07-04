@@ -60,12 +60,12 @@ export default function FormComponent() {
 
   return (
     <div className={styles.FormPageContainer}>
-      <div>Form</div>
-      
+      <h5 className={styles.FormText}>Form</h5>
+
       <div className={styles.FormContainer}>
         <form onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="fullName">Nombre:</label>
+          <div className={styles.separator}>
+            <label htmlFor="fullName" className={styles.fieldName} >Nombre:</label>
             <input
               className={styles.field}
               type="text"
@@ -77,8 +77,8 @@ export default function FormComponent() {
             {errors.fullName && <span className={styles.error}>{errors.fullName}</span>}
           </div>
 
-          <div>
-            <label htmlFor="email">Email:</label>
+          <div className={styles.separator}>
+            <label htmlFor="email" className={styles.fieldName}>Email:</label>
             <input
               className={styles.field}
               type="email"
@@ -90,8 +90,8 @@ export default function FormComponent() {
             {errors.email && <span className={styles.error}>{errors.email}</span>}
           </div>
 
-          <div>
-            <label htmlFor="description">Mensaje:</label>
+          <div className={styles.separator}>
+            <label htmlFor="description" className={styles.fieldName}>Mensaje:</label>
             <textarea
               className={styles.field}
               name="description"
