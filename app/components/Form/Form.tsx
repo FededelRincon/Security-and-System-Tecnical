@@ -60,8 +60,6 @@ export default function FormComponent() {
 
   return (
     <div className={styles.FormPageContainer}>
-      <h5 className={styles.FormText}>Formulario</h5>
-
       <div className={styles.FormContainer}>
         <form onSubmit={handleSubmit} noValidate>
           <div className={styles.separator}>

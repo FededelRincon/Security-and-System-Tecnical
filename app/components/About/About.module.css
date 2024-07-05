@@ -2,12 +2,6 @@
   margin: 0 1rem;
 }
 
-.AboutTitle {
-  /* background-color: var(--color-third); */
-  text-align: center;
-  font-size: 16px;
-}
-
 .AboutText {
   margin: 0 1.5rem 2rem 1.5rem;
   font-weight: 400;

@@ -4,7 +4,6 @@ export default function AboutComponent() {
   return (
     <div className={styles.AboutContainer}>
       <div className={styles.example}>
-        <h5 className={styles.AboutTitle}>Sobre mi</h5>
         <p className={styles.AboutText}>Hola, soy Lionel Messi, jugador profesional de fútbol y 
           considerado uno de los mejores de todos los tiempos. He tenido el privilegio de jugar 
           para el FC Barcelona durante la mayor parte de mi carrera, tambien jugue 2 años en el 

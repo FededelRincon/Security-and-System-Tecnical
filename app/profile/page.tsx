@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import AboutComponent from '../components/About/About';
 import InterestsComponent from '../components/Interests/Interests';
 import FormComponent from '../components/Form/Form';
+import styles from "./page.module.css";
 
 type ComponentName = 'about' | 'interests' | 'form';
 
@@ -20,19 +21,23 @@ export default function ProfilePage() {
 
   return (
     <>
-      <div onClick={() => toggleComponent('about')}>
-        <h2>About</h2>
-        {openComponent === 'about' && <AboutComponent />}
-      </div>
+      <div className={styles.ProfileContainer}>
 
-      <div onClick={() => toggleComponent('interests')}>
-        <h2>Interests</h2>
-        {openComponent === 'interests' && <InterestsComponent />}
-      </div>
+        <div onClick={() => toggleComponent('about')} className={styles.ComponentContainer}>
+          <h5 className={styles.AboutTitle}>Sobre mi</h5>
+          {openComponent === 'about' && <AboutComponent />}
+        </div>
 
-      <div onClick={() => toggleComponent('form')}>
-        <h2>Form</h2>
-        {openComponent === 'form' && <FormComponent />}
+        <div onClick={() => toggleComponent('interests')} className={styles.ComponentContainer}>
+          <h5 className={styles.InterestText}>Intereses</h5>
+          {openComponent === 'interests' && <InterestsComponent />}
+        </div>
+
+        <div onClick={() => toggleComponent('form')} className={styles.ComponentContainer}>
+          <h5 className={styles.FormText}>Formulario</h5>
+          {openComponent === 'form' && <FormComponent />}
+        </div>
+
       </div>
     </>
   );
