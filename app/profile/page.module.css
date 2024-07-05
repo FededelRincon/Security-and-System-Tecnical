@@ -17,18 +17,18 @@
 
 .content {
   flex: 1;
-  background-color: #f4f4f4;
+  background-color: (--color-eight);
 }
 
 /* Profile Page */
 .ProfileContainer{
+  background: radial-gradient(circle, var(--color-five) 20%, var(--color-eight) 35%, var(--color-eight) 65%, var(--color-five) 85%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  min-height: 75%; 
+  min-height: 96%; 
   margin: 1rem;
-  /* background-color: teal; */
 }
 @keyframes fadeInUp {
   from {
@@ -44,13 +44,18 @@
 .ComponentContainer{
   width: 90%;
   padding: 2rem 1rem;
-  border: solid 1px #345;
+  border: solid 1px var(--color-dark);
   border-radius: 1rem;
   /* background-color: tomato; */
   margin: 1rem;
   animation: fadeInUp 0.5s ease-in-out;
-
+  transition: border 0.5s ease-in-out;
 }
+
+.ComponentContainer:hover{
+  border: solid 1px var(--color-seven);
+}
+
 
 .Hidden {
   display: none;
