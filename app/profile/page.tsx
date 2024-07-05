@@ -19,10 +19,17 @@ export default function ProfilePage() {
     }
   };
 
+  const handleContainerClick = (componentName: ComponentName, e: React.MouseEvent) => {
+    // Solo toggle si se hace clic en el contenedor principal, no en sus hijos
+    if (e.target === e.currentTarget) {
+      toggleComponent(componentName);
+    }
+  };
+
   return (
     <div className={styles.ProfileContainer}>
       <div 
-        onClick={() => toggleComponent('about')} 
+        onClick={(e) => handleContainerClick('about', e)} 
         className={`${styles.ComponentContainer} ${openComponent && openComponent !== 'about' ? styles.Hidden : ''}`}
       >
         <h5 className={styles.AboutTitle}>Sobre mi</h5>
@@ -30,7 +37,7 @@ export default function ProfilePage() {
       </div>
 
       <div 
-        onClick={() => toggleComponent('interests')} 
+        onClick={(e) => handleContainerClick('interests', e)} 
         className={`${styles.ComponentContainer} ${openComponent && openComponent !== 'interests' ? styles.Hidden : ''}`}
       >
         <h5 className={styles.InterestText}>Intereses</h5>
@@ -38,7 +45,7 @@ export default function ProfilePage() {
       </div>
 
       <div 
-        onClick={() => toggleComponent('form')} 
+        onClick={(e) => handleContainerClick('form', e)} 
         className={`${styles.ComponentContainer} ${openComponent && openComponent !== 'form' ? styles.Hidden : ''}`}
       >
         <h5 className={styles.FormText}>Formulario</h5>
