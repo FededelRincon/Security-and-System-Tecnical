@@ -30,6 +30,16 @@
   margin: 1rem;
   /* background-color: teal; */
 }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .ComponentContainer{
   width: 90%;
@@ -38,6 +48,8 @@
   border-radius: 1rem;
   /* background-color: tomato; */
   margin: 1rem;
+  animation: fadeInUp 0.5s ease-in-out;
+
 }
 
 .Hidden {
@@ -72,9 +84,5 @@
     background-color: #f4f4f4;
   }
 
-  .ProfileContainer{
-    flex-direction: row;
-
-  }
 }
 
