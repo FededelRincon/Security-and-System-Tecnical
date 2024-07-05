@@ -11,7 +11,7 @@ type ComponentName = 'about' | 'interests' | 'form';
 export default function ProfilePage() {
   const [openComponent, setOpenComponent] = useState<ComponentName | null>(null);
 
-  const toggleComponent = (componentName:any) => {
+  const toggleComponent = (componentName: ComponentName) => {
     if (openComponent === componentName) {
       setOpenComponent(null);
     } else {
@@ -20,25 +20,30 @@ export default function ProfilePage() {
   };
 
   return (
-    <>
-      <div className={styles.ProfileContainer}>
-
-        <div onClick={() => toggleComponent('about')} className={styles.ComponentContainer}>
-          <h5 className={styles.AboutTitle}>Sobre mi</h5>
-          {openComponent === 'about' && <AboutComponent />}
-        </div>
-
-        <div onClick={() => toggleComponent('interests')} className={styles.ComponentContainer}>
-          <h5 className={styles.InterestText}>Intereses</h5>
-          {openComponent === 'interests' && <InterestsComponent />}
-        </div>
-
-        <div onClick={() => toggleComponent('form')} className={styles.ComponentContainer}>
-          <h5 className={styles.FormText}>Formulario</h5>
-          {openComponent === 'form' && <FormComponent />}
-        </div>
-
+    <div className={styles.ProfileContainer}>
+      <div 
+        onClick={() => toggleComponent('about')} 
+        className={`${styles.ComponentContainer} ${openComponent && openComponent !== 'about' ? styles.Hidden : ''}`}
+      >
+        <h5 className={styles.AboutTitle}>Sobre mi</h5>
+        {openComponent === 'about' && <AboutComponent />}
       </div>
-    </>
+
+      <div 
+        onClick={() => toggleComponent('interests')} 
+        className={`${styles.ComponentContainer} ${openComponent && openComponent !== 'interests' ? styles.Hidden : ''}`}
+      >
+        <h5 className={styles.InterestText}>Intereses</h5>
+        {openComponent === 'interests' && <InterestsComponent />}
+      </div>
+
+      <div 
+        onClick={() => toggleComponent('form')} 
+        className={`${styles.ComponentContainer} ${openComponent && openComponent !== 'form' ? styles.Hidden : ''}`}
+      >
+        <h5 className={styles.FormText}>Formulario</h5>
+        {openComponent === 'form' && <FormComponent />}
+      </div>
+    </div>
   );
 }
